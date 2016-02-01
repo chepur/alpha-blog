@@ -54,7 +54,7 @@ $navbar-default-bg: black;
 
 .article-title {
     font-weight: bold;
-    font-style: 1.5em;
+    font-size: 1.5em;
     
 }
 
@@ -63,6 +63,11 @@ $navbar-default-bg: black;
     padding-top: 15px;
     padding-bottom: 15px;
     
+}
+
+.listing {
+    list-style: none;
+    padding-left: 0;
 }
 
 footer {
