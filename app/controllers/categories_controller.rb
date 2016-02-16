@@ -21,7 +21,8 @@ class CategoriesController < ApplicationController
     end
     
     def show
-    
+        @category = Category.find(params[:id])
+        @category_articles = @category.articles.paginate(page: params[:page], per_page: 5)
     end
     
     private 
@@ -35,9 +36,5 @@ class CategoriesController < ApplicationController
             flash[:danger] = "Only admin users can perform that action"
             redirect_to categories_path
         end
-        # if logged_in? 
-        #     flash[:danger] = "Only admin users can perform that action"
-        #     redirect_to root_path
-        # end
     end
 end
